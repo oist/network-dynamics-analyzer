@@ -1,0 +1,4 @@
+include COPYING.txt
+include idtxl/infodynamics.jar
+recursive-include test/data *
+recursive-include docs *
