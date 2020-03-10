@@ -30,9 +30,8 @@ around middle:
 # data.generate_mute_data(n_samples=1000, n_replications=5)
 
 # Real data
-pkl_file = open('resampled_td_914463.pkl', 'rb')
-td = pickle.load(pkl_file)
-pkl_file.close()
+with open('joint-tracking/resampled_td_914463.pkl', 'rb') as pkl_file:
+    td = pickle.load(pkl_file)
 
 
 # pre_border_ix = np.array([np.arange(400, 600), np.arange(1400, 1600), np.arange(2400, 2600)]).reshape(600)
