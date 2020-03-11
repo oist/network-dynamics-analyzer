@@ -1,9 +1,16 @@
 #!/bin/bash
-#SBATCH -t 2-6
-#SBATCH --mem=8G
-#SBATCH -c 18
+#SBATCH --job-name=network_inference
+#SBATCH --output=arr_%A-%a.out
+#SBATCH --time=20:00:00
+#SBATCH --mem-per-cpu=4G
+#SBATCH --ntasks=1
+#SBATCH --array=2-19
+
 
 module load python/3.7.3
+module use $HOME/.modulefiles
+module load miniconda3
 cd $HOME/network-dynamics-analyzer/joint-tracking
+source $HOME/miniconda3/etc/profile.d/conda.sh
 conda activate idtxl
-python full_networktest_parallel.py 2
+python full_networktest_parallel.py center ${SLURM_ARRAY_TASK_ID}
