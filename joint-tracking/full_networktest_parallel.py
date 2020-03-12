@@ -58,7 +58,9 @@ settings = {'cmi_estimator': 'JidtKraskovCMI',
             'add_conditionals': [(0, 1), (0, 2), (1, 1), (1, 2)]}
 
 # c) Run analysis
-res = network_analysis.analyse_single_target(settings=settings, data=data, target=target_id)
+sources = list(range(2, 20))
+sources.remove(target_id)
+res = network_analysis.analyse_single_target(settings=settings, data=data, target=target_id, sources=sources)
 
 # Save results dictionary using pickle
 path = 'target_results/{}_res.{}.pkl'.format(region, str(target_id))
