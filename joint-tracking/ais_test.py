@@ -9,7 +9,7 @@ jarLocation = "/Users/katja/javawd/infodynamics-dist-1.4/infodynamics.jar"
 jpype.startJVM(jpype.getDefaultJVMPath(), "-ea", "-Djava.class.path=" + jarLocation)
 
 # 0. Load/prepare the data:
-pkl_file = open('resampled_td_914463.pkl', 'rb')
+pkl_file = open('input_data/resampled_td_914463.pkl', 'rb')
 td = pickle.load(pkl_file)
 pkl_file.close()
 

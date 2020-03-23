@@ -249,7 +249,7 @@ def main(measure, trial_num):
     jpype.startJVM(jpype.getDefaultJVMPath(), "-ea", "-Djava.class.path=" + jarLocation)
 
     # get data
-    pkl_file = open('resampled_td_914463.pkl', 'rb')
+    pkl_file = open('input_data/resampled_td_914463.pkl', 'rb')
     td = pickle.load(pkl_file)
     pkl_file.close()
 

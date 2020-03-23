@@ -34,7 +34,7 @@ def stack_data(ixs):
 
 
 # Real data
-with open('resampled_td_914463.pkl', 'rb') as pkl_file:
+with open('input_data/resampled_td_914463.pkl', 'rb') as pkl_file:
     td = pickle.load(pkl_file)
 
 if region == 'center':
