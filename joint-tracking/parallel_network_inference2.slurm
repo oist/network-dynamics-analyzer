@@ -2,9 +2,9 @@
 #SBATCH --job-name=network_inference
 #SBATCH --output=arr_%A-%a.out
 #SBATCH --time=20:00:00
-#SBATCH --mem-per-cpu=4G
+#SBATCH --mem-per-cpu=8G
 #SBATCH --ntasks=1
-#SBATCH --array=2,10,17,18
+#SBATCH --array=2-19
 
 module load python/3.7.3
 module use $HOME/.modulefiles
