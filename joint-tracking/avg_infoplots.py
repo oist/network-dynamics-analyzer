@@ -323,7 +323,7 @@ def get_avg_measures(trial_data, measure):
 """ RUN """
 
 # get data
-pkl_file = open('resampled_td_914463.pkl', 'rb')
+pkl_file = open('input_data/resampled_td_914463.pkl', 'rb')
 td = pickle.load(pkl_file)
 pkl_file.close()
 

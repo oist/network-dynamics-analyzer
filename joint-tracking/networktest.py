@@ -5,7 +5,12 @@ from idtxl.data import Data
 from idtxl.visualise_graph import plot_network
 import numpy as np
 import pickle
+from dotenv import load_dotenv
 from idtxl.network_comparison import NetworkComparison
+import os
+
+
+load_dotenv()
 
 """
 before border:
@@ -29,8 +34,13 @@ around middle:
 # data = Data()
 # data.generate_mute_data(n_samples=1000, n_replications=5)
 
+project_dir = os.path.join(os.getenv("PARENT_DIR"), 'joint-tracking')
+data_dir = os.path.join(project_dir, 'input_data')
+output_dir = os.path.join(project_dir, 'target_results')
+
+
 # Real data
-with open('joint-tracking/resampled_td_914463.pkl', 'rb') as pkl_file:
+with open(os.path.join(data_dir, 'resampled_td_914463.pkl', 'rb')) as pkl_file:
     td = pickle.load(pkl_file)
 
 

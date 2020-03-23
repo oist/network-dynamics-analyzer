@@ -1,2 +1,4 @@
 .idea
 joint-tracking/target_results
+.env
+network_run_log.txt
